@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import heroImage from "../assets/bdlogojpg";
+import heroImage from "../assets/bdlogo.jpg";
 
 const scrollToPortfolio = () => {
   const element = document.getElementById("portfolio");
