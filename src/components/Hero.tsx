@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import heroImage from "figma:asset/791c6d73878ca487e4fb822b24eacaa94c3b5538.png";
+import heroImage from "../assets/bdlogojpg";
 
 const scrollToPortfolio = () => {
   const element = document.getElementById("portfolio");

@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
-import logoImage from "figma:asset/96cd4127134b74547421709c0027747604e12586.png";
+import logoImage from "../assets/bdlogo.jpg";
+
 
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id);
