@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap"); 
+@import url("https://fonts.cdnfonts.com/css/roxboroughcf");
 /*! tailwindcss v4.1.3 | MIT License | https://tailwindcss.com */
 @layer properties {
   @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
@@ -72,6 +72,7 @@
     --color-gray-100: oklch(.967 .003 264.542);
     --color-gray-200: oklch(.928 .006 264.531);
     --color-gray-500: oklch(.551 .027 264.364);
+    --color-black: #000;
     --color-white: #fff;
     --spacing: .25rem;
     --container-md: 28rem;
@@ -102,6 +103,7 @@
     --text-6xl--line-height: 1;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
+    --font-weight-bold: 700;
     --font-weight-extrabold: 800;
     --leading-relaxed: 1.625;
     --radius-3xl: 1.5rem;
@@ -388,28 +390,28 @@
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) h1 {
     font-size: var(--text-2xl);
     font-weight: var(--font-weight-medium);
-    font-family: Playfair Display, serif;
+    font-family: RoxboroughCF, serif;
     line-height: 1.5;
   }
 
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) h2 {
     font-size: var(--text-xl);
     font-weight: var(--font-weight-medium);
-    font-family: Playfair Display, serif;
+    font-family: RoxboroughCF, serif;
     line-height: 1.5;
   }
 
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) h3 {
     font-size: var(--text-lg);
     font-weight: var(--font-weight-medium);
-    font-family: Playfair Display, serif;
+    font-family: RoxboroughCF, serif;
     line-height: 1.5;
   }
 
   :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) h4 {
     font-size: var(--text-base);
     font-weight: var(--font-weight-medium);
-    font-family: Playfair Display, serif;
+    font-family: RoxboroughCF, serif;
     line-height: 1.5;
   }
 
@@ -439,6 +441,10 @@
 
   .absolute {
     position: absolute;
+  }
+
+  .fixed {
+    position: fixed;
   }
 
   .relative {
@@ -473,8 +479,16 @@
     right: calc(var(--spacing) * 4);
   }
 
+  .right-8 {
+    right: calc(var(--spacing) * 8);
+  }
+
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
+  }
+
+  .bottom-8 {
+    bottom: calc(var(--spacing) * 8);
   }
 
   .left-0 {
@@ -573,6 +587,10 @@
 
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
+  }
+
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
   }
 
   .mt-8 {
@@ -1186,6 +1204,10 @@
     padding-block: calc(var(--spacing) * 2);
   }
 
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
   }
@@ -1273,6 +1295,11 @@
     line-height: var(--leading-relaxed);
   }
 
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+
   .font-extrabold {
     --tw-font-weight: var(--font-weight-extrabold);
     font-weight: var(--font-weight-extrabold);
@@ -1291,8 +1318,16 @@
     white-space: nowrap;
   }
 
+  .text-\[\#2d6a4f\] {
+    color: #2d6a4f;
+  }
+
   .text-\[\#daa520\] {
     color: #daa520;
+  }
+
+  .text-black {
+    color: var(--color-black);
   }
 
   .text-card-foreground {
@@ -1559,8 +1594,21 @@
     color: var(--foreground);
   }
 
+  .placeholder\:text-gray-500::placeholder {
+    color: var(--color-gray-500);
+  }
+
   .placeholder\:text-muted-foreground::placeholder {
     color: var(--muted-foreground);
+  }
+
+  @media (hover: hover) {
+    .hover\:scale-110:hover {
+      --tw-scale-x: 110%;
+      --tw-scale-y: 110%;
+      --tw-scale-z: 110%;
+      scale: var(--tw-scale-x) var(--tw-scale-y);
+    }
   }
 
   @media (hover: hover) {
@@ -1572,6 +1620,12 @@
   @media (hover: hover) {
     .hover\:border-\[\#daa520\]\/50:hover {
       border-color: oklab(75.1572% .0153891 .146126 / .5);
+    }
+  }
+
+  @media (hover: hover) {
+    .hover\:bg-\[\#a01f23\]:hover {
+      background-color: #a01f23;
     }
   }
 
@@ -1767,15 +1821,15 @@
     color: var(--primary-foreground);
   }
 
-  @media (width >= 48rem) {
-    .md\:flex {
-      display: flex;
+  @media (width >= 40rem) {
+    .sm\:w-auto {
+      width: auto;
     }
   }
 
   @media (width >= 48rem) {
-    .md\:inline-flex {
-      display: inline-flex;
+    .md\:flex {
+      display: flex;
     }
   }
 

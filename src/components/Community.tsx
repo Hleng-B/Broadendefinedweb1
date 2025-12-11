@@ -165,50 +165,50 @@ export function Community() {
 
               <div className="space-y-6">
                 <div>
-                  <Label htmlFor="name">Full Name *</Label>
+                  <Label htmlFor="name" className="text-white">Full Name *</Label>
                   <Input
                     id="name"
                     type="text"
                     value={formData.name}
                     onChange={(e) => handleInputChange("name", e.target.value)}
                     placeholder="Enter your full name"
-                    className="mt-2"
+                    className="mt-2 bg-white text-black placeholder:text-gray-500"
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="email">Email Address *</Label>
+                  <Label htmlFor="email" className="text-white">Email Address *</Label>
                   <Input
                     id="email"
                     type="email"
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
                     placeholder="your.email@example.com"
-                    className="mt-2"
+                    className="mt-2 bg-white text-black placeholder:text-gray-500"
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="phone">Phone Number</Label>
+                  <Label htmlFor="phone" className="text-white">Phone Number</Label>
                   <Input
                     id="phone"
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => handleInputChange("phone", e.target.value)}
                     placeholder="+27 XX XXX XXXX"
-                    className="mt-2"
+                    className="mt-2 bg-white text-black placeholder:text-gray-500"
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="business">Business/Brand Name (if applicable)</Label>
+                  <Label htmlFor="business" className="text-white">Business/Brand Name (if applicable)</Label>
                   <Input
                     id="business"
                     type="text"
                     value={formData.business}
                     onChange={(e) => handleInputChange("business", e.target.value)}
                     placeholder="Your business or brand name"
-                    className="mt-2"
+                    className="mt-2 bg-white text-black placeholder:text-gray-500"
                   />
                 </div>
               </div>
@@ -327,50 +327,50 @@ export function Community() {
 
               <div className="space-y-6">
                 <div>
-                  <Label htmlFor="tiktok">TikTok</Label>
+                  <Label htmlFor="tiktok" className="text-white">TikTok</Label>
                   <Input
                     id="tiktok"
                     type="text"
                     value={formData.socialLinks.tiktok}
                     onChange={(e) => handleSocialLinkChange("tiktok", e.target.value)}
                     placeholder="https://tiktok.com/@username"
-                    className="mt-2"
+                    className="mt-2 bg-white text-black placeholder:text-gray-500"
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="instagram">Instagram</Label>
+                  <Label htmlFor="instagram" className="text-white">Instagram</Label>
                   <Input
                     id="instagram"
                     type="text"
                     value={formData.socialLinks.instagram}
                     onChange={(e) => handleSocialLinkChange("instagram", e.target.value)}
                     placeholder="https://instagram.com/username"
-                    className="mt-2"
+                    className="mt-2 bg-white text-black placeholder:text-gray-500"
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="twitter">Twitter</Label>
+                  <Label htmlFor="twitter" className="text-white">Twitter</Label>
                   <Input
                     id="twitter"
                     type="text"
                     value={formData.socialLinks.twitter}
                     onChange={(e) => handleSocialLinkChange("twitter", e.target.value)}
                     placeholder="https://twitter.com/username"
-                    className="mt-2"
+                    className="mt-2 bg-white text-black placeholder:text-gray-500"
                   />
                 </div>
 
                 <div>
-                  <Label htmlFor="facebook">Facebook</Label>
+                  <Label htmlFor="facebook" className="text-white">Facebook</Label>
                   <Input
                     id="facebook"
                     type="text"
                     value={formData.socialLinks.facebook}
                     onChange={(e) => handleSocialLinkChange("facebook", e.target.value)}
                     placeholder="https://facebook.com/username"
-                    className="mt-2"
+                    className="mt-2 bg-white text-black placeholder:text-gray-500"
                   />
                 </div>
               </div>

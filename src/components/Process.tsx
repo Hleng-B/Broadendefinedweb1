@@ -1,6 +1,6 @@
 import { Card } from "./ui/card";
 import { Search, Lightbulb, Rocket, BarChart2 } from "lucide-react";
-import teamImage from "../assets/howwework.jpg";
+import teamImage from "figma:asset/7e3d7074d35b19e5f595f75ac1fdfbd214bb1909.png";
 
 const steps = [
   {

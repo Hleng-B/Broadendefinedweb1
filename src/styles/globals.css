@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap"); 
-
+@import url('https://fonts.cdnfonts.com/css/roxboroughcf');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -141,28 +140,28 @@
       font-size: var(--text-2xl);
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
-      font-family: Playfair Display, serif;
+      font-family: 'RoxboroughCF', serif;
     }
 
     h2 {
       font-size: var(--text-xl);
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
-      font-family: Playfair Display, serif;
+      font-family: 'RoxboroughCF', serif;
     }
 
     h3 {
       font-size: var(--text-lg);
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
-      font-family: Playfair Display, serif;
+      font-family: 'RoxboroughCF', serif;
     }
 
     h4 {
       font-size: var(--text-base);
       font-weight: var(--font-weight-medium);
       line-height: 1.5;
-      font-family: Playfair Display, serif;
+      font-family: 'RoxboroughCF', serif;
     }
 
     p {

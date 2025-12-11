@@ -1,6 +1,6 @@
 const testimonials = [
   {
-    quote: "You never disappoint, great job! I love the colour, the wording, the pictures, it is absolutely stunning and over the top.",
+    quote: "You never disappoint, great job! I love the colour, the wording, the pictures, everything is amazing.",
     name: "Coach T",
     service: "Profile Update"
   },
@@ -20,14 +20,14 @@ const testimonials = [
     service: "Social Media Management"
   },
   {
-    quote: "I see the growth and engagement. Thank you Broaden Defined!",
-    name: "Influencer L",
-    service: "Growing Instragram Followers and Engagement"
+    quote: "Professional, creative, and results-driven. They understand our brand voice perfectly and deliver exceptional content.",
+    name: "Marketing Manager L",
+    service: "Content Creation"
   },
   {
-    quote: "Thanks a lot, it's nice doing business with you and we will need more in future",
+    quote: "Best investment we made for our brand. The ROI speaks for itself - 200% increase in leads from social media!",
     name: "CEO K",
-    service: "Profile Update"
+    service: "Brand Campaign"
   }
 ];
 

@@ -1,15 +1,22 @@
-import { Instagram, Facebook, Linkedin,Mail, MapPin, Phone } from "lucide-react";
-import logoImage from "../assets/bdlogo.jpg";
+import { Instagram, Facebook, Linkedin, Twitter, Mail, MapPin, Phone, ArrowUp } from "lucide-react";
+import logoImage from "figma:asset/96cd4127134b74547421709c0027747604e12586.png";
 
 interface FooterProps {
   onNavigate?: (page: "home" | "blog" | "community") => void;
 }
 
 export function Footer({ onNavigate }: FooterProps) {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+
   return (
-    <footer className="bg-[#2d6a4f] text-white py-12 px-4">
+    <footer className="bg-[#2d6a4f] text-white py-12 px-4 relative">
       <div className="container mx-auto">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
           <div>
             <div className="mb-4">
               <img 
@@ -36,17 +43,7 @@ export function Footer({ onNavigate }: FooterProps) {
           </div>
           
           <div>
-            <h3 className="mb-4 text-white">Services</h3>
-            <ul className="space-y-2 text-white">
-              <li><a href="#" className="hover:text-[#daa520] transition-colors">Social Media Management</a></li>
-              <li><a href="#" className="hover:text-[#daa520] transition-colors">Content Creation</a></li>
-              <li><a href="#" className="hover:text-[#daa520] transition-colors">Paid Advertising</a></li>
-              <li><a href="#" className="hover:text-[#daa520] transition-colors">Brand Strategy</a></li>
-            </ul>
-          </div>
-          
-          <div>
-            <h3 className="mb-4 text-white">Company</h3>
+            <h3 className="mb-4 text-[#daa520] font-bold text-lg">Company</h3>
             <ul className="space-y-2 text-white">
               <li><a href="#about" className="hover:text-[#daa520] transition-colors">About Us</a></li>
               <li><a href="#portfolio" className="hover:text-[#daa520] transition-colors">Portfolio</a></li>
@@ -59,10 +56,20 @@ export function Footer({ onNavigate }: FooterProps) {
                 </button>
               </li>
             </ul>
+            
+            {/* Join Our Community Button */}
+            <div className="mt-6">
+              <button
+                onClick={() => onNavigate?.("community")}
+                className="bg-[#c1292e] text-white px-6 py-3 rounded-lg hover:bg-[#a01f23] transition-colors w-full sm:w-auto"
+              >
+                Join Our Community
+              </button>
+            </div>
           </div>
           
           <div>
-            <h3 className="mb-4 text-white">Contact</h3>
+            <h3 className="mb-4 text-[#daa520] font-bold text-lg">Contact</h3>
             <ul className="space-y-3 text-white">
               <li className="flex items-start gap-2">
                 <Phone className="h-5 w-5 flex-shrink-0 mt-0.5 text-white" />
@@ -92,6 +99,15 @@ export function Footer({ onNavigate }: FooterProps) {
           </div>
         </div>
       </div>
+      
+      {/* Scroll to Top Button */}
+      <button
+        onClick={scrollToTop}
+        className="fixed bottom-8 right-8 bg-[#c1292e] hover:bg-[#a01f23] text-white p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-50"
+        aria-label="Scroll to top"
+      >
+        <ArrowUp className="h-6 w-6" />
+      </button>
     </footer>
   );
 }

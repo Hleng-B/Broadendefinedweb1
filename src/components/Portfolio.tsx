@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import projectImage1 from "../assets/pro5.jpg";
-import projectImage2 from "../assets/pro6.jpg";
-import projectImage3 from "../assets/pro1.jpg";
-import projectImage4 from "../assets/pro2.jpg";
-import projectImage5 from "../assets/pro3.jpg";
-import projectImage6 from "../assets/pro4.jpg";
+import projectImage1 from "figma:asset/2001709a1d49d00af87863e551c2935a48fece69.png";
+import projectImage2 from "figma:asset/2d98dad83b66cbc4955cac0cbdf23b680dc5c0c5.png";
+import projectImage3 from "figma:asset/2c99fa1928f8010307d14d311d3523aa1fbf5008.png";
+import projectImage4 from "figma:asset/a776095cec35a2c61edb625496ed28605f9936c9.png";
+import projectImage5 from "figma:asset/9d79f91efd280459c23bd67279d91a1030759c00.png";
+import projectImage6 from "figma:asset/86f98d87bf9ef157bbc62f6d3e023291036353af.png";
 
 const projects = [
   {
@@ -23,26 +23,26 @@ const projects = [
   },
   {
     image: projectImage3,
-    title: "Leflora Wellness Clinic",
-    description: "Strengthened their online presence with consistent branding and educational health content.Helped increase posts, engagement, and overall page activity.Improved the clinics digital visibility and community reach.",
+    title: "Tshegofatso Ncube Photography",
+    description: "Achieved 293% Instagram growth (154 to 606 followers) with visually stunning content curation and strategic hashtag optimization for this photography business.",
     bgColor: "#2d6a4f"
   },
   {
     image: projectImage4,
-    title: "Bold Women Network",
-    description: "Grew the page into a stronger, more engaged women-focused community.Enhanced branding and content consistency boosted visibility.Follower growth reflects increased trust and interaction.",
+    title: "Keto Chef Tshego",
+    description: "Increased followers from 121 to 426 (252% growth) by showcasing delicious keto recipes and building an engaged health-focused community.",
     bgColor: "#2d6a4f"
   },
   {
     image: projectImage5,
-    title: "Zaneida Global Cosmetics",
-    description: "Revamped their visual identity with a clean, luxury-aligned aesthetic.Boosted engagement and follower growth through product-focused content.Enhanced the brands credibility and online presentation.",
+    title: "Lulu's Box",
+    description: "Doubled social media presence from 113 to 278 followers (146% growth) with product-focused content and creative brand storytelling for this gifting business.",
     bgColor: "#2d6a4f"
   },
   {
     image: projectImage6,
-    title: "Kudos Events",
-    description: "Elevated their Instagram with polished visuals and consistent event branding.Improved engagement and follower growth through curated content.Showcased their event expertise more professionally and clearly.",
+    title: "Malesela Mmusi Visual Art",
+    description: "Expanded audience from 175 to 406 followers (132% increase) through artistic content curation and gallery-style presentation of this visual artist's work.",
     bgColor: "#2d6a4f"
   }
 ];
