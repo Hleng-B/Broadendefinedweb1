@@ -1,6 +1,6 @@
 import { Button } from "./ui/button";
 import { ArrowRight, Mail, Phone } from "lucide-react";
-import contactImage from "figma:asset/68cc2006a2371b46dc75e42593c8d18e8d22e69d.png";
+import contactImage from "../assets/contactus.jpg";
 
 export function CTA() {
   return (

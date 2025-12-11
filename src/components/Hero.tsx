@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import heroImage from "figma:asset/791c6d73878ca487e4fb822b24eacaa94c3b5538.png";
+import heroImage from "../assets/bdlogo.jpg";
 
 const scrollToPortfolio = () => {
   const element = document.getElementById("portfolio");
@@ -15,11 +15,16 @@ export function Hero() {
   return (
     <section id="home" className="py-20 px-4 bg-[#2d6a4f]">
       <div className="container mx-auto">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          
+          {/* LEFT SIDE */}
           <div className="space-y-8">
+            
+            {/* BADGE */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-white rounded-full border border-white/20">
-             
-             
+              <span className="font-semibold tracking-wide">
+                Digital Marketing & PR Experts
+              </span>
             </div>
             
             <h1 className="text-5xl lg:text-6xl font-extrabold text-white">
