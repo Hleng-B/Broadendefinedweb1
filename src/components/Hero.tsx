@@ -27,7 +27,7 @@ export function Hero() {
               </span>
             </div>
             
-            <h1 className="text-5xl lg:text-6xl font-extrabold text-white">
+            <h1 className="text-5xl lg:text-6xl font-bold text-white">
               Grow Your Social Media Presence
             </h1>
             

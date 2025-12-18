@@ -61,7 +61,7 @@ export function Features() {
           <div className="inline-block px-4 py-2 bg-white/10 text-white rounded-full mb-4">
             Our Services
           </div>
-          <h2 className="text-5xl font-extrabold mb-4 text-white">
+          <h2 className="text-5xl font-bold mb-4 text-white">
             Everything You Need to Succeed Online
           </h2>
           <p className="text-xl text-white/90">

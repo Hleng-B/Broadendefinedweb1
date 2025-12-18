@@ -44,7 +44,7 @@ export function Process() {
               <div className="inline-block px-4 py-2 bg-white/10 text-white rounded-full mb-4">
                 Our Process
               </div>
-              <h2 className="text-5xl font-extrabold mb-4 text-white">How We Work</h2>
+              <h2 className="text-5xl font-bold mb-4 text-white">How We Work</h2>
               <p className="text-xl text-white/90">
                 A proven, systematic approach to growing your social media presence and achieving your goals.
               </p>

@@ -19,7 +19,7 @@ export function Stats() {
       <div className="container mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 order-2 lg:order-1">
-            <h2 className="text-4xl font-extrabold">Why Choose Broaden Defined?</h2>
+            <h2 className="text-4xl font-bold">Why Choose Broaden Defined?</h2>
             
             <p className="text-xl text-white/90">
               We don't just post content – we create meaningful connections between your 

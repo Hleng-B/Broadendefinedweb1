@@ -160,7 +160,7 @@ export function Portfolio() {
           <div className="inline-block px-4 py-2 bg-white/10 text-white rounded-full mb-4">
             Portfolio
           </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-4">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
             Our Projects
           </h1>
           <p className="text-xl text-white/90 mb-2">

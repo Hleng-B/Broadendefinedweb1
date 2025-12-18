@@ -14,7 +14,7 @@ export function CTA() {
             <div className="flex flex-col lg:flex-row items-center gap-12">
               {/* Text and Buttons Content */}
               <div className="flex-1 text-center lg:text-left">
-                <h2 className="text-5xl lg:text-5xl font-extrabold mb-6">
+                <h2 className="text-5xl lg:text-5xl font-bold mb-6">
                   Ready to Grow Your Brand?
                 </h2>
                 <p className="text-xl mb-8 opacity-90">
