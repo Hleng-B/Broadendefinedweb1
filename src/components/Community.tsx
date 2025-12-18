@@ -67,29 +67,30 @@ export function Community() {
   /* ---------- SUBMIT ---------- */
 
   const handleSubmit = async () => {
-    const payload = {
-      fullName: formData.name,
-      email: formData.email,
-      contactNumber: formData.phone,
-      businessName: formData.business,
-      platforms: formData.platforms,
-      socialLinks: formData.socialLinks,
-    };
-
-    try {
-      await fetch(APPS_SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-
-      setSubmitted(true);
-    } catch (err) {
-      alert("Submission failed. Please try again.");
-      console.error(err);
-    }
+  const payload = {
+    name: formData.name,
+    email: formData.email,
+    phone: formData.phone,
+    business: formData.business,
+    platforms: formData.platforms,
+    socialLinks: formData.socialLinks,
   };
+
+  try {
+    await fetch(APPS_SCRIPT_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    setSubmitted(true);
+  } catch (error) {
+    console.error("Submission error:", error);
+    alert("Something went wrong. Please try again.");
+  }
+};
 
   /* ---------- VALIDATION ---------- */
 
