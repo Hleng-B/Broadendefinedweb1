@@ -1,30 +1,39 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import projectImage1 from "../assets/pro5.jpg";
-import projectImage2 from "../assets/pro6.jpg";
-import projectImage3 from "../assets/pro1.jpg";
-import projectImage4 from "../assets/pro2.jpg";
-import projectImage5 from "../assets/pro3.jpg";
-import projectImage6 from "../assets/pro4.jpg";
+import projectImage1 from "../assets/kitchwithanne.pro.jpg";
+import projectImage2 from "../assets/kitchwithkambo.pro.jpg";
+import projectImage3 from "../assets/leflora.pro.jpg";
+import projectImage4 from "../assets/boldwomen.pro.jpg";
+import projectImage5 from "../assets/zaneida.pro.jpg";
+import projectImage6 from "../assets/kudos.pro.jpg";
+import projectImage7 from "../assets/africanambition.pro.jpg";
+import projectImage8 from "../assets/aronka.pro.jpg";
+import projectImage9 from "../assets/amelz.pro.jpg";
+import projectImage10 from "../assets/bokamoso.pro.jpg";
+import projectImage11 from "../assets/dependable.pro.jpg";
+import projectImage12 from "../assets/dremacare.pro.jpg";
+import projectImage13 from "../assets/nurses.pro.jpg";
+import projectImage14 from "../assets/phomelelong.pro.jpg";
+import projectImage15 from "../assets/wordsofspring.pro.jpg";
 
 const projects = [
   {
     image: projectImage1,
     title: "In The Kitchen With Ann",
-    description: "Grew Instagram following by 355% (173 to 787 followers) with targeted content strategy and consistent engagement, helping this food content creator expand their reach.",
+    description: "Grew Instagram following with targeted content strategy and consistent engagement, helping this food content creator expand their reach.",
     bgColor: "#2d6a4f"
   },
   {
     image: projectImage2,
-    title: "In The Kitchen With Kamboyisa",
-    description: "Transformed social media presence from 122 to 451 followers (270% growth) through authentic storytelling and community building for this culinary brand.",
+    title: "In The Kitchen With KaMboyisa",
+    description: "Transformed social media presence through authentic storytelling and community building for this culinary brand.",
     bgColor: "#2d6a4f"
   },
   {
     image: projectImage3,
     title: "Leflora Wellness Clinic",
-    description: "Strengthened their online presence with consistent branding and educational health content.Helped increase posts, engagement, and overall page activity.Improved the clinics digital visibility and community reach.",
+    description: "Strengthened their online presence with consistent branding and educational health content.<br>Helped increase posts, engagement, and overall page activity.Improved the clinics digital visibility and community reach.",
     bgColor: "#2d6a4f"
   },
   {
@@ -44,7 +53,61 @@ const projects = [
     title: "Kudos Events",
     description: "Elevated their Instagram with polished visuals and consistent event branding.Improved engagement and follower growth through curated content.Showcased their event expertise more professionally and clearly.",
     bgColor: "#2d6a4f"
-  }
+  },
+  {
+    image: projectImage7,
+    title: "African Ambition Consulting",
+    description: "Elevated their Instagram with polished visuals and attention grabbing bio.<br>Improved engagement and follower growth through curated content.Showcased their event expertise more professionally and clearly.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage8,
+    title: "Aronka Bophelo",
+    description: "Improved engagement and follower growth through curated content.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage9,
+    title: "Amelz Wellness Clinic",
+    description: "Grew the page into a stronger, more engaged and content consistent page which improved visibility.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage10,
+    title: "Bokamoso BaLona Training",
+    description: "Strengthened their online presence with consistent content that aligns with the development and training services the organisation offers.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage11,
+    title: "Dependable Wellness Clinic",
+    description: "Grew Instagram following with targeted content strategy and consistent engagement.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage12,
+    title: "Dream Care Wellness",
+    description: "Strengthened their online presence with consistent content that aligns with their wellness services.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage13,
+    title: "Nurses Vision Holds Power",
+    description: "Elevated their Instagram with polished visuals and consistent event branding.Improved engagement and follower growth through curated content.Showcased their event expertise more professionally and clearly.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage14,
+    title: "Phomelelong Wellness",
+    description: "Strengthened their online presence with consistent content that aligns with their wellness services.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage15,
+    title: "Words Of Spring",
+    description: "Strengthened their online presence with consistent content that boosts visibility.",
+    bgColor: "#2d6a4f"
+  },
 ];
 
 export function Portfolio() {
@@ -134,7 +197,7 @@ export function Portfolio() {
                       />
                     </div>
                     <div className="p-8 md:p-12 flex flex-col justify-center">
-                      <h3 className="mb-4 text-white">{projects[currentIndex].title}</h3>
+                      <h3 className="mb-4 text-2xl font-bold text-[#daa520] ">{projects[currentIndex].title}</h3>
                       <p className="text-white/80 leading-relaxed">{projects[currentIndex].description}</p>
                     </div>
                   </div>

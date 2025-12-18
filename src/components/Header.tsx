@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
-import logoImage from "../assets/bdlogo.jpg";
+import logoImage from "../assets/transLogo.png";
 
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id);

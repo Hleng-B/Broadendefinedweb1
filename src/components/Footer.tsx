@@ -1,5 +1,5 @@
 import { Instagram, Facebook, Linkedin, Twitter, Mail, MapPin, Phone, ArrowUp } from "lucide-react";
-import logoImage from "../assets/bdlogo.jpg";
+import logoImage from "../assets/transLogo.png";
 
 interface FooterProps {
   onNavigate?: (page: "home" | "blog" | "community") => void;
