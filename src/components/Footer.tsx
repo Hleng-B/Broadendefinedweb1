@@ -73,8 +73,13 @@ export function Footer({ onNavigate }: FooterProps) {
             <ul className="space-y-3 text-white">
               <li className="flex items-start gap-2">
                 <Phone className="h-5 w-5 flex-shrink-0 mt-0.5 text-white" />
-                <span>081-735-1868</span>
-              </li>
+                 <a 
+        href="tel:+27817351868" 
+        className="hover:text-[#daa520] transition-colors"
+      >
+        081-735-1868
+      </a>
+    </li>
               <li className="flex items-start gap-2">
                 <Mail className="h-5 w-5 flex-shrink-0 mt-0.5 text-white" />
                 <a href="mailto:info@broadendefined.co.za" className="hover:text-[#daa520] transition-colors break-all">
