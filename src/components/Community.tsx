@@ -7,7 +7,7 @@ import { CheckCircle } from "lucide-react";
 
 /* 🔗 GOOGLE APPS SCRIPT ENDPOINT */
 const APPS_SCRIPT_URL =
-  "https://script.google.com/macros/s/AKfycbwDLWgLKA931sl-QDRR3fDtCf7EQIZ2D4tCw9L3T--FhI3KpzG5lbPzyLNds2_pDFLM/exec";
+  "https://script.google.com/macros/s/AKfycbxMiemorRgJX6bjIGtalX-ShQmJz1z_f-ihyNQk6uBT3UOMnr0WqLIbDxHj_nheYzAu/exec";
 
 export function Community() {
   const [currentStep, setCurrentStep] = useState(1);
