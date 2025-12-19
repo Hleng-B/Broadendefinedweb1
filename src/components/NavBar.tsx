@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import Logo from "../assets/bd-logo.jpg"; // change if your file name is different
+import Logo from "../assets/bd-logo.jpg";
 
 interface Props {
   onNav: (page: string) => void;
 }
+
+const COMMUNITY_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfZ8x51xMwzMUvi0VtM2MLKsCltTqCwSBTy3KLoTSwGZHHDow/viewform?usp=dialog";
 
 export default function NavBar({ onNav }: Props) {
   const [open, setOpen] = useState(false);
@@ -14,7 +17,6 @@ export default function NavBar({ onNav }: Props) {
     { label: "Services", value: "services" },
     { label: "Portfolio", value: "portfolio" },
     { label: "Blog", value: "blog" },
-    { label: "Community", value: "community" },
     { label: "Contact", value: "contact" },
   ];
 
@@ -32,7 +34,9 @@ export default function NavBar({ onNav }: Props) {
             alt="BD Logo"
             className="w-12 h-12 rounded-md object-cover"
           />
-          <h1 className="font-bold tracking-wide text-lg">BROADEN DEFINED</h1>
+          <h1 className="font-bold tracking-wide text-lg">
+            BROADEN DEFINED
+          </h1>
         </div>
 
         {/* Desktop Menu */}
@@ -47,12 +51,15 @@ export default function NavBar({ onNav }: Props) {
             </button>
           ))}
 
-          <button
-            onClick={() => onNav("community")}
+          {/* Join Community → Google Form */}
+          <a
+            href={COMMUNITY_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-[#daa520] hover:bg-[#c49a1c] px-4 py-2 rounded-md transition font-semibold"
           >
             Join Community
-          </button>
+          </a>
         </div>
 
         {/* Mobile Hamburger */}
@@ -80,15 +87,16 @@ export default function NavBar({ onNav }: Props) {
             </button>
           ))}
 
-          <button
-            onClick={() => {
-              onNav("community");
-              setOpen(false);
-            }}
-            className="w-full bg-[#daa520] hover:bg-[#c49a1c] px-4 py-2 rounded-md font-semibold text-lg"
+          {/* Mobile Join Community → Google Form */}
+          <a
+            href={COMMUNITY_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="block w-full bg-[#daa520] hover:bg-[#c49a1c] px-4 py-2 rounded-md font-semibold text-lg text-center"
           >
             Join Community
-          </button>
+          </a>
         </div>
       )}
     </nav>
