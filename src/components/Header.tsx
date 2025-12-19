@@ -2,6 +2,10 @@ import { useState } from "react";
 import { Button } from "./ui/button";
 import logoImage from "../assets/transLogo.png";
 
+/* Community Google Form URL */
+const COMMUNITY_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfZ8x51xMwzMUvi0VtM2MLKsCltTqCwSBTy3KLoTSwGZHHDow/viewform?usp=dialog";
+
 const scrollToSection = (id: string) => {
   const element = document.getElementById(id);
   if (element) {
@@ -50,7 +54,7 @@ export function Header({ onNavigate }: HeaderProps) {
           />
         </button>
 
-    {/* DESKTOP NAV */}
+        {/* DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-8">
           <button
             onClick={() => handleNavClick("home")}
@@ -88,14 +92,17 @@ export function Header({ onNavigate }: HeaderProps) {
           </button>
         </nav>
 
-        {/* DESKTOP BUTTON */}
+        {/* DESKTOP JOIN COMMUNITY → GOOGLE FORM */}
         <div className="hidden md:flex items-center gap-4">
-          <Button
-            onClick={() => onNavigate?.("community")}
-            className="bg-[#daa520] hover:bg-[#daa520]/90 text-white font-bold transition-all duration-300"
+          <a
+            href={COMMUNITY_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Join Our Community
-          </Button>
+            <Button className="bg-[#daa520] hover:bg-[#daa520]/90 text-white font-bold transition-all duration-300">
+              Join Our Community
+            </Button>
+          </a>
         </div>
 
         {/* MOBILE HAMBURGER BUTTON */}
@@ -104,7 +111,7 @@ export function Header({ onNavigate }: HeaderProps) {
           onClick={() => setMenuOpen(!menuOpen)}
         >
           <span className={menuOpen ? "text-[#daa520]" : "text-white hover:text-[#daa520]"}>
-            {menuOpen ? <span style={{color: '#daa520'}}>✖</span> : "☰"}
+            {menuOpen ? <span style={{ color: "#daa520" }}>✖</span> : "☰"}
           </span>
         </button>
       </div>
@@ -148,15 +155,18 @@ export function Header({ onNavigate }: HeaderProps) {
             Contact
           </button>
 
-          <Button
-            onClick={() => {
-              setMenuOpen(false);
-              onNavigate?.("community");
-            }}
-            className="w-full bg-[#daa520] hover:bg-[#daa520]/90 py-3 text-lg font-bold transition-all duration-300"
+          {/* MOBILE JOIN COMMUNITY → GOOGLE FORM */}
+          <a
+            href={COMMUNITY_FORM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            className="block"
           >
-            Join Our Community
-          </Button>
+            <Button className="w-full bg-[#daa520] hover:bg-[#daa520]/90 py-3 text-lg font-bold transition-all duration-300">
+              Join Our Community
+            </Button>
+          </a>
         </div>
       )}
     </header>
