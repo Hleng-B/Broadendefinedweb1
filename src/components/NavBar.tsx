@@ -5,8 +5,16 @@ interface Props {
   onNav: (page: string) => void;
 }
 
-const COMMUNITY_FORM_URL =
-  "https://docs.google.com/forms/d/e/1FAIpQLSfZ8x51xMwzMUvi0VtM2MLKsCltTqCwSBTy3KLoTSwGZHHDow/viewform?usp=dialog";
+/* ================================
+   COMMUNITY GOOGLE FORM REDIRECT
+================================ */
+const openCommunityForm = () => {
+  window.open(
+    "https://docs.google.com/forms/d/e/1FAIpQLSfZ8x51xMwzMUvi0VtM2MLKsCltTqCwSBTy3KLoTSwGZHHDow/viewform?usp=dialog",
+    "_blank",
+    "noopener,noreferrer"
+  );
+};
 
 export default function NavBar({ onNav }: Props) {
   const [open, setOpen] = useState(false);
@@ -51,15 +59,13 @@ export default function NavBar({ onNav }: Props) {
             </button>
           ))}
 
-          {/* Join Community → Google Form */}
-          <a
-            href={COMMUNITY_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          {/* JOIN COMMUNITY – FORCED REDIRECT */}
+          <button
+            onClick={openCommunityForm}
             className="bg-[#daa520] hover:bg-[#c49a1c] px-4 py-2 rounded-md transition font-semibold"
           >
             Join Community
-          </a>
+          </button>
         </div>
 
         {/* Mobile Hamburger */}
@@ -87,16 +93,16 @@ export default function NavBar({ onNav }: Props) {
             </button>
           ))}
 
-          {/* Mobile Join Community → Google Form */}
-          <a
-            href={COMMUNITY_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setOpen(false)}
+          {/* MOBILE JOIN COMMUNITY – FORCED REDIRECT */}
+          <button
+            onClick={() => {
+              setOpen(false);
+              openCommunityForm();
+            }}
             className="block w-full bg-[#daa520] hover:bg-[#c49a1c] px-4 py-2 rounded-md font-semibold text-lg text-center"
           >
             Join Community
-          </a>
+          </button>
         </div>
       )}
     </nav>
