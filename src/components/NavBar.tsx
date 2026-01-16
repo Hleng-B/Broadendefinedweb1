@@ -1,9 +1,20 @@
 import React, { useState } from "react";
-import Logo from "../assets/bd-logo.jpg"; // change if your file name is different
+import Logo from "../assets/bd-logo.jpg";
 
 interface Props {
   onNav: (page: string) => void;
 }
+
+/* ================================
+   COMMUNITY GOOGLE FORM REDIRECT
+================================ */
+const openCommunityForm = () => {
+  window.open(
+    "https://docs.google.com/forms/d/e/1FAIpQLSfZ8x51xMwzMUvi0VtM2MLKsCltTqCwSBTy3KLoTSwGZHHDow/viewform?usp=dialog",
+    "_blank",
+    "noopener,noreferrer"
+  );
+};
 
 export default function NavBar({ onNav }: Props) {
   const [open, setOpen] = useState(false);
@@ -14,7 +25,6 @@ export default function NavBar({ onNav }: Props) {
     { label: "Services", value: "services" },
     { label: "Portfolio", value: "portfolio" },
     { label: "Blog", value: "blog" },
-    { label: "Community", value: "community" },
     { label: "Contact", value: "contact" },
   ];
 
@@ -32,7 +42,9 @@ export default function NavBar({ onNav }: Props) {
             alt="BD Logo"
             className="w-12 h-12 rounded-md object-cover"
           />
-          <h1 className="font-bold tracking-wide text-lg">BROADEN DEFINED</h1>
+          <h1 className="font-bold tracking-wide text-lg">
+            BROADEN DEFINED
+          </h1>
         </div>
 
         {/* Desktop Menu */}
@@ -47,8 +59,9 @@ export default function NavBar({ onNav }: Props) {
             </button>
           ))}
 
+          {/* JOIN COMMUNITY – FORCED REDIRECT */}
           <button
-            onClick={() => onNav("community")}
+            onClick={openCommunityForm}
             className="bg-[#daa520] hover:bg-[#c49a1c] px-4 py-2 rounded-md transition font-semibold"
           >
             Join Community
@@ -80,12 +93,13 @@ export default function NavBar({ onNav }: Props) {
             </button>
           ))}
 
+          {/* MOBILE JOIN COMMUNITY – FORCED REDIRECT */}
           <button
             onClick={() => {
-              onNav("community");
               setOpen(false);
+              openCommunityForm();
             }}
-            className="w-full bg-[#daa520] hover:bg-[#c49a1c] px-4 py-2 rounded-md font-semibold text-lg"
+            className="block w-full bg-[#daa520] hover:bg-[#c49a1c] px-4 py-2 rounded-md font-semibold text-lg text-center"
           >
             Join Community
           </button>
