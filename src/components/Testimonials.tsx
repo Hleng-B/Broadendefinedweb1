@@ -1,34 +1,25 @@
 const testimonials = [
   {
-    quote: "You never disappoint, great job! I love the colour, the wording, the pictures, everything is amazing.",
-    name: "Coach T",
-    service: "Profile Update"
+    quote: "' I am sure I am allowed to say WOW.I am impressed beyond my expectations, I never expected such great work for my daughter's page. Well done Z.'",
+    name: "Coach Tshepiso",
   },
   {
-    quote: "After just a day of posting, I saw an increase of +14 followers on my profile. I am a satisfied customer!",
-    name: "Influencer D",
-    service: "Followers and Audience Growth"
+    quote: "'I don't think all these big brands I have collaborated with would have recognised me if it was not for Zanele'",
+    name: "Anelisa",
   },
   {
-    quote: "I see the growth and engagement. Thank you Broaden Defined!",
-    name: "Entrepreneur S",
-    service: "Growing Followers and Engagement"
+    quote: "'What I love about Zanele is we get authentic followers and engagement'",
+    name: "Moreen",
   },
   {
-    quote: "The team at Broaden Defined completely transformed our social media presence. Our engagement has skyrocketed!",
-    name: "Business Owner M",
-    service: "Social Media Management"
+    quote: "'You have helped me to grow my presence online, thank you Zanele'",
+    name: "Zanele Dlamini",
   },
   {
-    quote: "Professional, creative, and results-driven. They understand our brand voice perfectly and deliver exceptional content.",
-    name: "Marketing Manager L",
-    service: "Content Creation"
+    quote: "'I still remember when I got my first client on Instagram,I was over the moon. My account being managed by Zanele made this happen.'",
+    name: "SP Unique Creations",
   },
-  {
-    quote: "Best investment we made for our brand. The ROI speaks for itself - 200% increase in leads from social media!",
-    name: "CEO K",
-    service: "Brand Campaign"
-  }
+  
 ];
 
 export function Testimonials() {
@@ -53,9 +44,6 @@ export function Testimonials() {
               <div className="mt-auto">
                 <p className="text-[#daa520] mb-1">
                   {testimonial.name}
-                </p>
-                <p className="text-white/60 text-sm">
-                  {testimonial.service}
                 </p>
               </div>
             </div>
