@@ -23,7 +23,7 @@ export function Hero() {
             {/* BADGE */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-white rounded-full border border-white/20">
               <span className="font-semibold tracking-wide">
-                Digital Marketing & PR Experts
+                Digital Marketing & Influencer Agency
               </span>
             </div>
             

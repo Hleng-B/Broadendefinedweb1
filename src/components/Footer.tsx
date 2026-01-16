@@ -98,10 +98,6 @@ export function Footer({ onNavigate }: FooterProps) {
           <p className="text-white">
             © 2025 Broaden Defined. All rights reserved.
           </p>
-          <div className="flex gap-6 text-white">
-            <a href="#" className="hover:text-[#daa520] transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-[#daa520] transition-colors">Terms of Service</a>
-          </div>
         </div>
       </div>
       
