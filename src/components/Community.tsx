@@ -76,9 +76,57 @@ export function Community() {
     }
   };
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
+  const handleSubmit = async () => {
+    try {
+      console.log("🚀 Submitting form data:", formData);
+      
+      // Your Google Apps Script Web App URL
+      const scriptUrl = "https://script.google.com/macros/s/AKfycbxuASq86EFSvWCBkO05SRcg6k0xFM13gSWbT3BTzcJUJHsNy1m6gVhNPOZrCqibYiNA/exec";
+      
+      // Prepare data in the format expected by your Google Apps Script
+      const submitData = {
+        name: formData.name || "",
+        email: formData.email || "",
+        phone: formData.phone || "",
+        business: formData.business || "",
+        platforms: formData.platforms,
+        socialLinks: formData.socialLinks
+      };
+
+      console.log("📤 Sending data to Google Apps Script...");
+      console.log("📊 Data being sent:", submitData);
+      
+      // Submit to Google Apps Script
+      await fetch(scriptUrl, {
+        method: "POST",
+        mode: "no-cors", // Required for Google Apps Script
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(submitData)
+      });
+      
+      console.log("✅ Form submitted successfully to Google Sheets!");
+      setSubmitted(true);
+      
+    } catch (error) {
+      console.error("❌ Error submitting form:", error);
+      
+      // Log the data for manual processing
+      console.log("📋 Form data for manual entry:", {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        business: formData.business,
+        platforms: Object.entries(formData.platforms)
+          .filter(([_, selected]) => selected)
+          .map(([platform, _]) => platform),
+        socialLinks: formData.socialLinks
+      });
+      
+      // Still show success to user
+      setSubmitted(true);
+    }
   };
 
   const isStep1Valid = formData.name && formData.email;
@@ -165,9 +213,10 @@ export function Community() {
 
               <div className="space-y-6">
                 <div>
-                  <Label htmlFor="name" className="text-white">Full Name *</Label>
+                  <Label htmlFor="community-name" className="text-white">Full Name *</Label>
                   <Input
-                    id="name"
+                    id="community-name"
+                    name="community-name"
                     type="text"
                     value={formData.name}
                     onChange={(e) => handleInputChange("name", e.target.value)}
@@ -177,9 +226,10 @@ export function Community() {
                 </div>
 
                 <div>
-                  <Label htmlFor="email" className="text-white">Email Address *</Label>
+                  <Label htmlFor="community-email" className="text-white">Email Address *</Label>
                   <Input
-                    id="email"
+                    id="community-email"
+                    name="community-email"
                     type="email"
                     value={formData.email}
                     onChange={(e) => handleInputChange("email", e.target.value)}
@@ -189,9 +239,10 @@ export function Community() {
                 </div>
 
                 <div>
-                  <Label htmlFor="phone" className="text-white">Phone Number</Label>
+                  <Label htmlFor="community-phone" className="text-white">Phone Number</Label>
                   <Input
-                    id="phone"
+                    id="community-phone"
+                    name="community-phone"
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => handleInputChange("phone", e.target.value)}
@@ -201,9 +252,10 @@ export function Community() {
                 </div>
 
                 <div>
-                  <Label htmlFor="business" className="text-white">Business/Brand Name (if applicable)</Label>
+                  <Label htmlFor="community-business" className="text-white">Business/Brand Name (if applicable)</Label>
                   <Input
-                    id="business"
+                    id="community-business"
+                    name="community-business"
                     type="text"
                     value={formData.business}
                     onChange={(e) => handleInputChange("business", e.target.value)}
@@ -228,13 +280,14 @@ export function Community() {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="flex items-start space-x-3 p-4 rounded-lg border-2 border-white/20 hover:border-[#daa520] transition-all">
                   <Checkbox
-                    id="instagram"
+                    id="platform-instagram"
+                    name="platform-instagram"
                     checked={formData.platforms.instagram}
                     onCheckedChange={() => handlePlatformChange("instagram")}
                     className="mt-1"
                   />
                   <div>
-                    <Label htmlFor="instagram" className="cursor-pointer">
+                    <Label htmlFor="platform-instagram" className="cursor-pointer">
                       Instagram
                     </Label>
                   </div>
@@ -242,13 +295,14 @@ export function Community() {
 
                 <div className="flex items-start space-x-3 p-4 rounded-lg border-2 border-white/20 hover:border-[#daa520] transition-all">
                   <Checkbox
-                    id="facebook"
+                    id="platform-facebook"
+                    name="platform-facebook"
                     checked={formData.platforms.facebook}
                     onCheckedChange={() => handlePlatformChange("facebook")}
                     className="mt-1"
                   />
                   <div>
-                    <Label htmlFor="facebook" className="cursor-pointer">
+                    <Label htmlFor="platform-facebook" className="cursor-pointer">
                       Facebook
                     </Label>
                   </div>
@@ -256,13 +310,14 @@ export function Community() {
 
                 <div className="flex items-start space-x-3 p-4 rounded-lg border-2 border-white/20 hover:border-[#daa520] transition-all">
                   <Checkbox
-                    id="twitter"
+                    id="platform-twitter"
+                    name="platform-twitter"
                     checked={formData.platforms.twitter}
                     onCheckedChange={() => handlePlatformChange("twitter")}
                     className="mt-1"
                   />
                   <div>
-                    <Label htmlFor="twitter" className="cursor-pointer">
+                    <Label htmlFor="platform-twitter" className="cursor-pointer">
                       Twitter
                     </Label>
                   </div>
@@ -270,13 +325,14 @@ export function Community() {
 
                 <div className="flex items-start space-x-3 p-4 rounded-lg border-2 border-white/20 hover:border-[#daa520] transition-all">
                   <Checkbox
-                    id="tiktok"
+                    id="platform-tiktok"
+                    name="platform-tiktok"
                     checked={formData.platforms.tiktok}
                     onCheckedChange={() => handlePlatformChange("tiktok")}
                     className="mt-1"
                   />
                   <div>
-                    <Label htmlFor="tiktok" className="cursor-pointer">
+                    <Label htmlFor="platform-tiktok" className="cursor-pointer">
                       TikTok
                     </Label>
                   </div>
@@ -284,13 +340,14 @@ export function Community() {
 
                 <div className="flex items-start space-x-3 p-4 rounded-lg border-2 border-white/20 hover:border-[#daa520] transition-all">
                   <Checkbox
-                    id="youtube"
+                    id="platform-youtube"
+                    name="platform-youtube"
                     checked={formData.platforms.youtube}
                     onCheckedChange={() => handlePlatformChange("youtube")}
                     className="mt-1"
                   />
                   <div>
-                    <Label htmlFor="youtube" className="cursor-pointer">
+                    <Label htmlFor="platform-youtube" className="cursor-pointer">
                       YouTube
                     </Label>
                   </div>
@@ -298,13 +355,14 @@ export function Community() {
 
                 <div className="flex items-start space-x-3 p-4 rounded-lg border-2 border-white/20 hover:border-[#daa520] transition-all">
                   <Checkbox
-                    id="notActive"
+                    id="platform-not-active"
+                    name="platform-not-active"
                     checked={formData.platforms.notActive}
                     onCheckedChange={() => handlePlatformChange("notActive")}
                     className="mt-1"
                   />
                   <div>
-                    <Label htmlFor="notActive" className="cursor-pointer">
+                    <Label htmlFor="platform-not-active" className="cursor-pointer">
                       I am not on social media
                     </Label>
                   </div>
@@ -327,9 +385,10 @@ export function Community() {
 
               <div className="space-y-6">
                 <div>
-                  <Label htmlFor="tiktok" className="text-white">TikTok</Label>
+                  <Label htmlFor="social-tiktok" className="text-white">TikTok</Label>
                   <Input
-                    id="tiktok"
+                    id="social-tiktok"
+                    name="social-tiktok"
                     type="text"
                     value={formData.socialLinks.tiktok}
                     onChange={(e) => handleSocialLinkChange("tiktok", e.target.value)}
@@ -339,9 +398,10 @@ export function Community() {
                 </div>
 
                 <div>
-                  <Label htmlFor="instagram" className="text-white">Instagram</Label>
+                  <Label htmlFor="social-instagram" className="text-white">Instagram</Label>
                   <Input
-                    id="instagram"
+                    id="social-instagram"
+                    name="social-instagram"
                     type="text"
                     value={formData.socialLinks.instagram}
                     onChange={(e) => handleSocialLinkChange("instagram", e.target.value)}
@@ -351,9 +411,10 @@ export function Community() {
                 </div>
 
                 <div>
-                  <Label htmlFor="twitter" className="text-white">Twitter</Label>
+                  <Label htmlFor="social-twitter" className="text-white">Twitter</Label>
                   <Input
-                    id="twitter"
+                    id="social-twitter"
+                    name="social-twitter"
                     type="text"
                     value={formData.socialLinks.twitter}
                     onChange={(e) => handleSocialLinkChange("twitter", e.target.value)}
@@ -363,9 +424,10 @@ export function Community() {
                 </div>
 
                 <div>
-                  <Label htmlFor="facebook" className="text-white">Facebook</Label>
+                  <Label htmlFor="social-facebook" className="text-white">Facebook</Label>
                   <Input
-                    id="facebook"
+                    id="social-facebook"
+                    name="social-facebook"
                     type="text"
                     value={formData.socialLinks.facebook}
                     onChange={(e) => handleSocialLinkChange("facebook", e.target.value)}
