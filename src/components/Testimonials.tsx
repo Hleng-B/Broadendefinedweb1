@@ -1,22 +1,22 @@
 const testimonials = [
   {
-    quote: "' I am sure I am allowed to say WOW.I am impressed beyond my expectations, I never expected such great work for my daughter's page. Well done Z.'",
+    quote: "' I am sure I am allowed to say WOW.I am impressed beyond my expectations, I never expected such great work for my daughter's page. Well done Broaden Defined.'",
     name: "Coach Tshepiso",
   },
   {
-    quote: "'I don't think all these big brands I have collaborated with would have recognised me if it was not for Zanele'",
+    quote: "'I don't think all these big brands I have collaborated with would have recognised me if it was not for Broaden Defined'",
     name: "Anelisa",
   },
   {
-    quote: "'What I love about Zanele is we get authentic followers and engagement'",
+    quote: "'What I love about Broaden Defined is we get authentic followers and engagement'",
     name: "Moreen",
   },
   {
-    quote: "'You have helped me to grow my presence online, thank you Zanele'",
+    quote: "'You have helped me to grow my presence online, thank you Broaden Defined!'",
     name: "Zanele Dlamini",
   },
   {
-    quote: "'I still remember when I got my first client on Instagram,I was over the moon. My account being managed by Zanele made this happen.'",
+    quote: "'I still remember when I got my first client on Instagram,I was over the moon. My account being managed by Broaden Defined made this happen.'",
     name: "SP Unique Creations",
   },
   
