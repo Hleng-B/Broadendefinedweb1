@@ -3,14 +3,12 @@ import { Button } from "./ui/button";
 import logoImage from "../assets/transLogo.png";
 
 /* ================================
-   COMMUNITY GOOGLE FORM REDIRECT
+   COMMUNITY NAVIGATION
 ================================ */
-const openCommunityForm = () => {
-  window.open(
-    "https://docs.google.com/forms/d/e/1FAIpQLSfZ8x51xMwzMUvi0VtM2MLKsCltTqCwSBTy3KLoTSwGZHHDow/viewform?usp=dialog",
-    "_blank",
-    "noopener,noreferrer"
-  );
+const handleCommunityClick = (onNavigate?: (page: "home" | "blog" | "community") => void) => {
+  if (onNavigate) {
+    onNavigate("community");
+  }
 };
 
 const scrollToSection = (id: string) => {
@@ -102,7 +100,7 @@ export function Header({ onNavigate }: HeaderProps) {
         {/* DESKTOP JOIN COMMUNITY */}
         <div className="hidden md:flex items-center gap-4">
           <Button
-            onClick={openCommunityForm}
+            onClick={() => handleCommunityClick(onNavigate)}
             className="bg-[#daa520] hover:bg-[#daa520]/90 text-white font-bold transition-all duration-300"
           >
             Join Our Community
@@ -163,7 +161,7 @@ export function Header({ onNavigate }: HeaderProps) {
           <Button
             onClick={() => {
               setMenuOpen(false);
-              openCommunityForm();
+              handleCommunityClick(onNavigate);
             }}
             className="w-full bg-[#daa520] hover:bg-[#daa520]/90 py-3 text-lg font-bold transition-all duration-300"
           >
