@@ -36,6 +36,8 @@ export function Community() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionId, setSubmissionId] = useState<string | null>(null);
 
   const handlePlatformChange = (platform: string) => {
     setFormData({
@@ -76,21 +78,46 @@ export function Community() {
     }
   };
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e?: React.MouseEvent) => {
+    // Prevent default behavior and event bubbling
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
+    // Prevent double submission
+    if (isSubmitting) {
+      console.log("⚠️ Form is already being submitted, ignoring duplicate request");
+      return;
+    }
+
     try {
-      console.log("🚀 Submitting form data:", formData);
+      // Generate unique submission ID to prevent duplicates
+      const currentSubmissionId = `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+      
+      // Check if we already have a submission ID (prevents double submission)
+      if (submissionId) {
+        console.log("⚠️ Form already submitted with ID:", submissionId);
+        return;
+      }
+      
+      setSubmissionId(currentSubmissionId);
+      setIsSubmitting(true);
+      console.log("🚀 Submitting form data with ID:", currentSubmissionId);
       
       // Your Google Apps Script Web App URL
       const scriptUrl = "https://script.google.com/macros/s/AKfycbxuASq86EFSvWCBkO05SRcg6k0xFM13gSWbT3BTzcJUJHsNy1m6gVhNPOZrCqibYiNA/exec";
       
       // Prepare data in the format expected by your Google Apps Script
       const submitData = {
+        submissionId: currentSubmissionId,
         name: formData.name || "",
         email: formData.email || "",
         phone: formData.phone || "",
         business: formData.business || "",
         platforms: formData.platforms,
-        socialLinks: formData.socialLinks
+        socialLinks: formData.socialLinks,
+        timestamp: new Date().toISOString()
       };
 
       console.log("📤 Sending data to Google Apps Script...");
@@ -126,6 +153,8 @@ export function Community() {
       
       // Still show success to user
       setSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -474,11 +503,16 @@ export function Community() {
               </Button>
             ) : (
               <Button
-                onClick={handleSubmit}
+                onMouseDown={(e) => {
+                  e.preventDefault();
+                  handleSubmit(e);
+                }}
+                disabled={isSubmitting || submitted}
                 size="lg"
-                className="bg-[#daa520] hover:bg-[#daa520]/90"
+                className="bg-[#daa520] hover:bg-[#daa520]/90 disabled:opacity-50 disabled:cursor-not-allowed"
+                type="button"
               >
-                Join Community
+                {isSubmitting ? "Submitting..." : "Join Community"}
               </Button>
             )}
           </div>
