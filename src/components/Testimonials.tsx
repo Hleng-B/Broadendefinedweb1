@@ -19,7 +19,30 @@ const testimonials = [
     quote: "'I still remember when I got my first client on Instagram,I was over the moon. My account being managed by Broaden Defined made this happen.'",
     name: "SP Unique Creations",
   },
-  
+  {
+    quote: "You never disappoint, great job! I love the colour, the wording, the pictures, everything is amazing.",
+    name: "Coach T",
+  },
+  {
+    quote: "After just a day of posting, I saw an increase of +14 followers on my profile. I am a satisfied customer!",
+    name: "Influencer D",
+  },
+  {
+    quote: "I see the growth and engagement. Thank you Broaden Defined!",
+    name: "Entrepreneur S",
+  },
+  {
+    quote: "The team at Broaden Defined completely transformed our social media presence. Our engagement has skyrocketed!",
+    name: "Business Owner M",
+  },
+  {
+    quote: "Professional, creative, and results-driven. They understand our brand voice perfectly and deliver exceptional content.",
+    name: "Marketing Manager L",
+  },
+  {
+    quote: "Best investment we made for our brand. The ROI speaks for itself - 200% increase in leads from social media!",
+    name: "CEO K",
+  },
 ];
 
 export function Testimonials() {

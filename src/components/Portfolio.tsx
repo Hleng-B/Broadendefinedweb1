@@ -11,6 +11,14 @@ import projectImage7 from "../assets/amelz.png";
 import projectImage8 from "../assets/bokamoso.png";
 import projectImage9 from "../assets/dreamcare.png";
 import projectImage10 from "../assets/wordsofspring.png";
+import projectImage11 from "../assets/WhatsApp Image 2026-02-03 at 13.42.33.jpeg";
+import projectImage12 from "../assets/WhatsApp Image 2026-02-03 at 13.42.33 (1).jpeg";
+import projectImage13 from "../assets/WhatsApp Image 2026-02-03 at 13.42.33 (2).jpeg";
+import projectImage14 from "../assets/WhatsApp Image 2026-02-03 at 13.42.34.jpeg";
+import projectImage15 from "../assets/WhatsApp Image 2026-02-03 at 13.42.34 (1).jpeg";
+import projectImage16 from "../assets/WhatsApp Image 2026-02-03 at 13.42.34 (2).jpeg";
+import projectImage17 from "../assets/WhatsApp Image 2026-02-03 at 13.42.34 (3).jpeg";
+import projectImage18 from "../assets/WhatsApp Image 2026-02-03 at 13.42.35.jpeg";
 
 const projects = [
   {
@@ -28,7 +36,7 @@ const projects = [
   {
     image: projectImage3,
     title: "Leflora Wellness Clinic",
-    description: "Strengthened their online presence with consistent branding and educational health content.<br>Helped increase posts, engagement, and overall page activity.Improved the clinics digital visibility and community reach.",
+    description: "Strengthened their online presence with consistent branding and educational health content. Helped increase posts, engagement, and overall page activity. Improved the clinics digital visibility and community reach.",
     bgColor: "#2d6a4f"
   },
   {
@@ -40,7 +48,7 @@ const projects = [
   {
     image: projectImage5,
     title: "Zaneida Global Cosmetics",
-    description: "Revamped their visual identity with a clean, luxury-aligned aesthetic.Boosted engagement and follower growth through product-focused content.Enhanced the brands credibility and online presentation.",
+    description: "Revamped their visual identity with a clean, luxury-aligned aesthetic. Boosted engagement and follower growth through product-focused content. Enhanced the brands credibility and online presentation.",
     bgColor: "#2d6a4f"
   },
   {
@@ -71,6 +79,54 @@ const projects = [
     image: projectImage10,
     title: "Words Of Spring",
     description: "Strengthened their online presence with consistent content that boosts visibility.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage11,
+    title: "Bold Women Network",
+    description: "A strategic Instagram transformation for Bold Women Network, focused on elevating visual identity, clarifying brand messaging, and driving community growth. The project refined aesthetics, optimized the bio and content structure, and repositioned the platform as a bold, modern hub for women to connect, collaborate, and thrive in business and lifestyle.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage12,
+    title: "Project 12",
+    description: "Project description here.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage13,
+    title: "Project 13",
+    description: "Project description here.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage14,
+    title: "Project 14",
+    description: "Project description here.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage15,
+    title: "Project 15",
+    description: "Project description here.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage16,
+    title: "Project 16",
+    description: "Project description here.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage17,
+    title: "Project 17",
+    description: "Project description here.",
+    bgColor: "#2d6a4f"
+  },
+  {
+    image: projectImage18,
+    title: "Project 18",
+    description: "Project description here.",
     bgColor: "#2d6a4f"
   },
  

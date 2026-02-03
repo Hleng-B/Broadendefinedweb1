@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Get Google Form Entry IDs</title>
+</head>
+<body>
+    <h1>How to Get Google Form Entry IDs</h1>
+    
+    <h2>Steps:</h2>
+    <ol>
+        <li>Open your Google Form: <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZ8x51xMwzMUvi0VtM2MLKsCltTqCwSBTy3KLoTSwGZHHDow/viewform" target="_blank">Your Form</a></li>
+        <li>Right-click on the page and select "View Page Source" or press Ctrl+U</li>
+        <li>Search for "entry." in the source code</li>
+        <li>Look for patterns like: <code>entry.123456789</code></li>
+        <li>Each form field will have a unique entry ID</li>
+    </ol>
+    
+    <h2>What to look for:</h2>
+    <ul>
+        <li><strong>Name field:</strong> entry.XXXXXXXXX</li>
+        <li><strong>Email field:</strong> entry.YYYYYYYYY</li>
+        <li><strong>Phone field:</strong> entry.ZZZZZZZZZ</li>
+        <li><strong>Business field:</strong> entry.AAAAAAAAA</li>
+        <li><strong>Platforms field:</strong> entry.BBBBBBBBB</li>
+        <li><strong>Social links field:</strong> entry.CCCCCCCCC</li>
+    </ul>
+    
+    <h2>Alternative Method:</h2>
+    <p>You can also:</p>
+    <ol>
+        <li>Fill out your form once manually</li>
+        <li>Open browser developer tools (F12)</li>
+        <li>Go to Network tab</li>
+        <li>Submit the form</li>
+        <li>Look for the "formResponse" request</li>
+        <li>Check the form data to see the entry IDs</li>
+    </ol>
+</body>
+</html>
