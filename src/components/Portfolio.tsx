@@ -89,44 +89,44 @@ const projects = [
   },
   {
     image: projectImage12,
-    title: "Project 12",
-    description: "Project description here.",
+    title: "African Ambition Consultations",
+    description: "Assisted African Ambition Consultations in enhancing their online presence by creating consistent, engaging content that highlights their consulting services and expertise. This project focused on improving online visibility and increasing follower engagement.",
     bgColor: "#2d6a4f"
   },
   {
     image: projectImage13,
-    title: "Project 13",
-    description: "Project description here.",
+    title: "Phomelelong Wellness Clinic",
+    description: "Enhanced the clinic's online presence with consistent, engaging content that aligns with their wellness services. Improved visibility and community engagement through strategic social media management.",
     bgColor: "#2d6a4f"
   },
   {
     image: projectImage14,
-    title: "Project 14",
-    description: "Project description here.",
+    title: "Inthekitchenwith_Ann",
+    description: "Assisted with brand campaigns by growing followers, increasing audience reach and supporting overall online visibility through consistent content.",
     bgColor: "#2d6a4f"
   },
   {
     image: projectImage15,
-    title: "Project 15",
-    description: "Project description here.",
+    title: "Inthekitchenwith_KaMboyisa",
+    description: "Provided social media management that focused on growing followers, increasing audience reach, and enhancing overall online visibility through consistent and rebranding the pages look to align with the client.",
     bgColor: "#2d6a4f"
   },
   {
     image: projectImage16,
-    title: "Project 16",
-    description: "Project description here.",
+    title: "Kudos_events1",
+    description: "Managed social media presence for Kudos Events, focusing on increasing engagement and visibility through strategic content creation and digital positioning.",
     bgColor: "#2d6a4f"
   },
   {
     image: projectImage17,
-    title: "Project 17",
-    description: "Project description here.",
+    title: "Nurses Vision Holds Power",
+    description: "Enhanced the visibility and engagement of the brand through strategic social media management and content creation.",
     bgColor: "#2d6a4f"
   },
   {
     image: projectImage18,
-    title: "Project 18",
-    description: "Project description here.",
+    title: "Dependable Wellness Clinic",
+    description: "Assisted with content aimed at growing followers, improving audience reach and online visibility.",
     bgColor: "#2d6a4f"
   },
  
